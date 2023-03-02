@@ -1,0 +1,13 @@
+<ngx-datatable class="material fullscreen mt-3" [rows]="rows" [reorderable]="reorderable" [headerHeight]="50"
+    [footerHeight]="50" rowHeight="auto" [limit]="20" [scrollbarH]="true" [columnMode]="ColumnMode.force">
+    <ngx-datatable-column name="Date" prop="date">
+        <ng-template let-value="value" ngx-datatable-cell-template>
+            {{value.toDate() | date:'dd/MM/yyyy'}}
+        </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-column [width]="100" name="Name" prop="name"></ngx-datatable-column>
+    <ngx-datatable-column [width]="100" name="Number" prop="number"></ngx-datatable-column>
+    <ngx-datatable-column [width]="300" name="Email" prop="email"></ngx-datatable-column>
+    <ngx-datatable-column [width]="100" name="Company" prop="company"></ngx-datatable-column>
+    <ngx-datatable-column [width]="300" name="Intrested In" prop="intrestedin"></ngx-datatable-column>
+</ngx-datatable>

@@ -1,0 +1,16 @@
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let product of products; let i = index" [class.active]="i == currentIndex"
+        (click)="setActiveTutorial(product, i)">
+        {{ product.name }}
+    </li>
+</ul>
+
+<div class="col-md-6">
+    <div *ngIf="currentProduct">
+        <app-product-details (refreshList)="refreshList()" [product]="currentProduct"></app-product-details>
+    </div>
+    <div *ngIf="!currentProduct">
+        <br />
+        <p>Please click on a Tutorial...</p>
+    </div>
+</div>

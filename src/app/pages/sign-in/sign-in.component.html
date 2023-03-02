@@ -1,0 +1,61 @@
+<div class="text-center d-flex align-items-center min-vh-100">
+    <main class="form-signin w-100 m-auto">
+        <form class="authblock">
+            <img class="mb-4" src="./../../../assets/img/tsl_logo_new_outline_stroke-01 1.png" alt="" width="175"
+                height="">
+            <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+            <div class="form-floating ">
+                <input type="email" class="form-control formControl" id="floatingInput" placeholder="Username" #userName
+                    required>
+                <label for=" floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control formControl" id="floatingPassword" placeholder="Password"
+                    #userPassword required>
+                <label for="floatingPassword">Password</label>
+            </div>
+
+            <!-- <div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div> -->
+            <button class="w-100 btn btn-lg btn-primary" type="button" value="Log in"
+                (click)="authService.SignIn(userName.value, userPassword.value)">Sign in</button>
+            <p class="mt-5 mb-3 text-muted">© 2016–2022</p>
+        </form>
+    </main>
+</div>
+
+
+<!-- 
+<div class="d-flex w-100 h-100 justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="displayTable">
+        <div class="displayTableCell">
+            <div class="authBlock">
+                <h3>Sign In</h3>
+                <div class="formGroup">
+                    <input type="text" class="formControl" placeholder="Username" #userName required>
+                </div>
+                <div class="formGroup">
+                    <input type="password" class="formControl" placeholder="Password" #userPassword required>
+                </div>
+                <div class="formGroup">
+                    <input type="button" class="btn btnPrimary" value="Log in"
+                        (click)="authService.SignIn(userName.value, userPassword.value)">
+                </div>
+                <div class="formGroup">
+                    <span class="or"><span class="orInner">Or</span></span>
+                </div>
+
+                <div class="forgotPassword">
+                    <span routerLink="/forgot-password">Forgot Password?</span>
+                </div>
+            </div>
+            <div class="redirectToLogin">
+                <span>Don't have an account?<span class="redirect" routerLink="/register-user"> Sign Up</span></span>
+            </div>
+        </div>
+    </div>
+</div> -->

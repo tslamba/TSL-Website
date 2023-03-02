@@ -1,0 +1,153 @@
+<div class="d-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block position-absolute w-100"
+    style="z-index: 1000;">
+    <nav id="navbar_top" class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#"> <img class="logo"
+                    src="../../../assets/img/tsl_logo_new_outline_stroke-01 1.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main_nav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link " routerLink="/" routerLinkActive="active"
+                            [routerLinkActiveOptions]="{exact : true}"> Home
+                        </a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" routerLink="/products" [routerLinkActive]="['active']">
+                            Product </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#whywe"> Partners </a></li>
+                    <li class="nav-item"><a class="nav-link" href="#client"> Clients </a></li>
+                    <!-- <li class="nav-item">/li> -->
+
+
+                </ul>
+            </div> <!-- navbar-collapse.// -->
+
+            <div class="">
+                <a class="nav-link btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    style="color: white; padding-left: 1.2rem !important; padding-right: 1.2rem !important;">
+                    Contact Us
+                </a>
+            </div>
+        </div> <!-- container-fluid.// -->
+    </nav>
+</div>
+
+<div class=" d-block d-sm-block d-md-block d-lg-none d-xl-none d-xxl-none position-absolute w-100"
+    style="z-index: 1000;">
+
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between ">
+        <a class="navbar-brand ms-3" href="#"> <img class="logo"
+                src="../../../assets/img/tsl_logo_new_outline_stroke-01 1.png" alt=""></a>
+
+
+        <div class="d-flex align-items-center">
+            <ng-lottie containerClass="moving-box" class="me-2" [styles]="styless" [options]="optionss"
+                (animationCreated)="animationCreated($event)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            </ng-lottie>
+            <button class="navbar-toggler me-3" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header" style="background-color:#ededed;">
+
+            <a class="offcanvas-title ms-4" id="offcanvasExampleLabel" href="/">
+                <img class="logo" src="../../../assets/img/tsl_logo_new_outline_stroke-01 1.png" alt="">
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item my-2">
+                    <a class="nav-link active" href="#"> Home </a>
+                </li>
+                <li class="nav-item my-2"><a class="nav-link" href="#"> Product </a></li>
+                <li class="nav-item my-2"><a class="nav-link" href="#"> Clients </a></li>
+                <li class="nav-item my-2"><a class="nav-link" href="#"> Partners </a></li>
+                <li class="nav-item my-2"><a class="nav-link" href="#"> Contact Us </a></li>
+
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <form #userForm="ngForm" (ngSubmit)="userForm.form.valid && saveTutorial(userForm)">
+                <div class="submit-form">
+                    <div *ngIf="!submitted">
+                        <div class="modal-body">
+                            <div class="form-floating pb-3">
+                                <input type="text" class="form-control" id="name" required [(ngModel)]="form.name"
+                                    placeholder="Name" name="name" minlength="4" #name="ngModel"
+                                    [ngClass]="{ 'is-invalid': userForm.submitted && name.invalid }" required>
+                                <label for="name">Name*</label>
+                                <div class="invalid-feedback" *ngIf="userForm.submitted && name.invalid">
+                                    <p class="p-0 mb-0">Name is required</p>
+                                </div>
+                            </div>
+                            <div class="form-floating pb-3">
+                                <input type="tel" class="form-control" id="number" required [(ngModel)]="form.number"
+                                    #number="ngModel" name="number" placeholder="Number"
+                                    [ngClass]="{ 'is-invalid': userForm.submitted && number.invalid }" required>
+                                <label for="number">Number*</label>
+                                <div class="invalid-feedback" *ngIf="userForm.submitted && number.invalid">
+                                    <p class="p-0 mb-0">Number is required</p>
+                                </div>
+                            </div>
+                            <div class="form-floating pb-3">
+                                <input type="email" class="form-control" id="email" required [(ngModel)]="form.email"
+                                    #email="ngModel" name="email" placeholder="Email"
+                                    [ngClass]="{ 'is-invalid': userForm.submitted && email.invalid }" required />
+                                <label for="email">Email*</label>
+                                <div class="invalid-feedback" *ngIf="userForm.submitted && email.invalid">
+                                    <p class="p-0 mb-0">Email is required</p>
+                                </div>
+                            </div>
+                            <div class="form-floating pb-3">
+                                <input type="text" class="form-control" id="company" required [(ngModel)]="form.company"
+                                    name="company" placeholder="company" />
+                                <label for="email">Company Name</label>
+                            </div>
+
+                            <div class="form-floating pb-3">
+                                <textarea class="form-control" id="interest" required [(ngModel)]="form.intrestedin"
+                                    name="interest" placeholder="interest"> </textarea>
+                                <label for="interest">Requirement</label>
+                            </div>
+
+                            <div class="d-none">
+                                <input class="form-control" type="text" name="date" id="date" [(ngModel)]="form.date"
+                                    name="date" placeholder="date" value="{{this.todayDate}}">
+                                <label for="date">Date</label>
+                            </div>
+                            <!-- <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div> -->
+                        </div>
+                    </div>
+                    <div class="modal-body" *ngIf="submitted">
+                        <ng-lottie containerClass="moving-box" [styles]="styles" [options]="options"
+                            (animationCreated)="animationCreated($event)">
+                        </ng-lottie>
+                        <h4 class="text-primary fw-bold text-center">We will get back to you shortly!</h4>
+                    </div>
+                    <div class="modal-footer ">
+                        <button (click)="newTutorial()" type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Close</button>
+                        <button *ngIf="!submitted" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

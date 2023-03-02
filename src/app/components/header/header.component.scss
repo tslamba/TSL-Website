@@ -1,0 +1,113 @@
+.logo {
+    max-width: 110px;
+    width: 100%;
+}
+
+nav {
+    // border-bottom: 2px solid #0167B0;
+    background-color: white;
+    // border-image-slice: 1;
+    // border-width: 1.5px;
+    // border-image-source: linear-gradient(to left, #072363, #);
+}
+
+.offcanvas-header {
+    background-color: white !important;
+    border-bottom: 2px solid #0167B0;
+}
+
+.nav-item {
+    padding: 0px 20px;
+
+    li::marker {
+        list-style-type: circle;
+        content: "•";
+        color: #0167B0;
+    }
+
+    .nav-link {
+        color: #1d1c23;
+        font-weight: 600;
+        letter-spacing: 0px;
+        cursor: pointer;
+        position: relative;
+
+
+    }
+
+    .nav-link:hover {
+        color: #0167B0;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 85%;
+        text-align: center !important;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 4px;
+        left: 7.5%;
+        background-color: #0167B0;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .nav-link:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    .nav-link.active {
+        color: #0167B0;
+        font-weight: 700;
+    }
+
+}
+
+.offcanvas-start {
+    width: 350px !important;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    border-width: 0 0 1.5px 0;
+    border-color: #c4c4c4;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    border-radius: 0;
+    padding-left: 0px;
+    color: #0167B0;
+    font-weight: 600;
+
+}
+
+
+
+.form-control:focus {
+    outline: none !important;
+    border-color: #0167B0;
+    box-shadow: none;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    padding-left: 0px;
+}
+
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label,
+.form-floating>.form-select~label {
+    color: black;
+    opacity: 1;
+    // font-size: 2px;
+    font-weight: bold;
+}
+
+.modal-footer {
+    border: 0;
+}

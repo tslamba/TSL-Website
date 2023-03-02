@@ -1,0 +1,33 @@
+<swiper [config]="swiperConfig">
+    <ng-template class="ms-2" swiperSlide *ngFor="let img of currentProduct.images">
+        <div class="card">
+            <img src="{{img}}" class="w-100 h-100" alt="">
+        </div>
+    </ng-template>
+</swiper>
+
+<div *ngIf="currentProduct">
+    <h1>{{currentProduct.name}}</h1>
+    <ul *ngFor="let features of currentProduct.features;">
+        <li> {{features}} </li>
+    </ul>
+
+
+    <div class="row" *ngFor="let header of currentProduct.header;">
+        <div class="col-lg-12">
+            <h1> {{header.headername}}</h1>
+            <div *ngFor="let sub of header.subheader;">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p> {{sub.subheadername}}</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="" *ngFor="let value of sub.subheadervalue;">
+                            <p> {{value}} </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

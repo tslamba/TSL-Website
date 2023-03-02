@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "266b436d-a9aa-457c-b720-a38ab3d8dbd2"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -31,17 +34,26 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/scss/custom.css",
+              "node_modules/swiper/swiper.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/header.js",
+              "node_modules/fullpage.js/vendors/scrolloverflow.min.js",
+              "node_modules/fullpage.js/dist/fullpage.min.js",
+              "node_modules/fullpage.js/vendors/easings.min.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -99,9 +111,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/assets/scss/custom.css",
+              "src/styles.scss",
+              "node_modules/swiper/swiper.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "src/assets/js/header.js",
+              "node_modules/fullpage.js/vendors/scrolloverflow.min.js",
+              "node_modules/fullpage.js/dist/fullpage.min.js",
+              "node_modules/fullpage.js/vendors/easings.min.js"
+            ]
           }
         }
       }
