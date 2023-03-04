@@ -27,6 +27,7 @@ import { DashHeaderComponent } from './components/dash-header/dash-header.compon
 import { EnquiryComponent } from './pages/dashboard/enquiry/enquiry.component';
 import { DashProductComponent } from './pages/dashboard/dash-product/dash-product.component';
 import { ProductDetailsComponent } from './pages/dashboard/product-details/product-details.component';
+import { NewHomeComponent } from './pages/new-home/new-home.component';
 
 export function playerFactory() {
   return player;
@@ -42,7 +43,8 @@ export function playerFactory() {
     DashHeaderComponent,
     EnquiryComponent,
     DashProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    NewHomeComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +59,6 @@ export function playerFactory() {
     FormsModule,
     ReactiveFormsModule,
     NgxDatatableModule
-    
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

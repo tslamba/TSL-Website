@@ -5,8 +5,7 @@
 
 nav {
     // border-bottom: 2px solid #0167B0;
-    background-color: white;
-    // border-image-slice: 1;
+    background-color: transparent; // border-image-slice: 1;
     // border-width: 1.5px;
     // border-image-source: linear-gradient(to left, #072363, #);
 }
@@ -22,11 +21,11 @@ nav {
     li::marker {
         list-style-type: circle;
         content: "•";
-        color: #0167B0;
+        color: #10bab9;
     }
 
     .nav-link {
-        color: #1d1c23;
+        color: #aaccf3;
         font-weight: 600;
         letter-spacing: 0px;
         cursor: pointer;
@@ -48,7 +47,7 @@ nav {
         height: 2px;
         bottom: 4px;
         left: 7.5%;
-        background-color: #0167B0;
+        background-color: #10bab9;
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
     }
@@ -59,7 +58,7 @@ nav {
     }
 
     .nav-link.active {
-        color: #0167B0;
+        color: #2872aa;
         font-weight: 700;
     }
 

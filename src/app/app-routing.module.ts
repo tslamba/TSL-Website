@@ -4,6 +4,7 @@ import { DashProductComponent } from './pages/dashboard/dash-product/dash-produc
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EnquiryComponent } from './pages/dashboard/enquiry/enquiry.component';
 import { HomeComponent } from './pages/home/home.component';
+import { NewHomeComponent } from './pages/new-home/new-home.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { AuthGuard } from './services/guard/auth.guard';
@@ -15,16 +16,16 @@ const routes: Routes = [
   },
   {
     path: 'products',
-    component:ProductsComponent
+    component: ProductsComponent
   },
   {
     path: 'sign-in',
-    component:SignInComponent
+    component: SignInComponent
   },
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [AuthGuard] 
+    canActivate: [AuthGuard]
   },
   {
     path: 'dashboard/enquiry',

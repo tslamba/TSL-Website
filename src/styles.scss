@@ -10,10 +10,19 @@ body {
     color: #1d1c23 !important;
 }
 
+.row {
+    margin: 0 !important;
+    // padding: 0 !important;
+}
 
+.text-primary {
+    color: #2178ad !important;
+}
 
 .primary-bg {
-    background-color: #0167B0;
+    // background-color: #0167B0;
+    background-color: #2178ad;
+
 }
 
 .grey-bg {
@@ -86,4 +95,31 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     // hyphens: auto;
+}
+
+h1 {
+    font-weight: 600 !important;
+}
+
+.secondary-button {
+    border-radius: 999em !important;
+    background-color: rgb(16, 186, 185) !important;
+    color: white !important;
+    padding: 0.5rem 1.5rem !important;
+    transition: transform 0.50s ease-out !important;
+    font-weight: 600 !important;
+    transform-origin: bottom left !important;
+
+}
+
+.secondary-button:hover {
+    background-color: #0c8d8d !important;
+    transform-origin: bottom left;
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px 5px rgba(16, 186, 186, 0.3);
+    // transition: transform 0.25s ease-out;
+}
+
+.fs-01 {
+    font-size: 13px !important;
 }
